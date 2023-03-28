@@ -163,9 +163,17 @@ h1 span {
   font-size: 0.75rem;
 }
 
-a {
-  all: unset;
-  display: inline;
+.float {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.float a {
+  color: rgba(255, 255, 255, 0.7333333333);
+  cursor: pointer;
+}
+.float a:hover {
+  color: rgb(255, 194, 103);
 }
 
 .wrapper {

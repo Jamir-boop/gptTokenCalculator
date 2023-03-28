@@ -4,6 +4,7 @@ $base-color: #191919;
 $wrapper-color: #3b3b3b;
 $white: #fff;
 $gray: #ffffffbb;
+$accent-color: rgb(255, 194, 103);
 
 body {
 	font-family: "Source Code Pro", monospace !important;
@@ -28,10 +29,22 @@ h1 {
 	}
 }
 
-a{
-	all:unset;
-	display: inline;
+.float {
+	position: absolute;
+
+	bottom: 1rem;
+	// left: 1rem;
+	right: 1rem;
+
+	a {
+		&:hover {
+			color: $accent-color;
+		}
+		color: $gray;
+		cursor: pointer;
+	}
 }
+
 .wrapper {
 	background-color: transparentize($wrapper-color, 0.1);
 	display: grid;
@@ -76,10 +89,10 @@ a{
 	border: 1px solid $gray;
 	border-radius: 0.25rem;
 }
-#result{
-    color: $white;
+#result {
+	color: $white;
 }
 
 .special {
-	color: rgb(255, 194, 103);
+	color: $accent-color;
 }
