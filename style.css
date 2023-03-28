@@ -163,6 +163,11 @@ h1 span {
   font-size: 0.75rem;
 }
 
+a {
+  all: unset;
+  display: inline;
+}
+
 .wrapper {
   background-color: rgba(59, 59, 59, 0.9);
   display: grid;
