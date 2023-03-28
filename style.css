@@ -221,7 +221,7 @@ h1 span {
   color: #cf5fd4;
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 500px) {
   .wrapper {
     height: 100vh;
     width: 100vw;
