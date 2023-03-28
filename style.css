@@ -173,7 +173,7 @@ h1 span {
   cursor: pointer;
 }
 .float a:hover {
-  color: rgb(255, 194, 103);
+  color: #cf5fd4;
 }
 
 .wrapper {
@@ -218,5 +218,13 @@ h1 span {
 }
 
 .special {
-  color: rgb(255, 194, 103);
+  color: #cf5fd4;
+}
+
+@media all and (max-width: 400px) {
+  .wrapper {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

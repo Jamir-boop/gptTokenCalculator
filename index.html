@@ -30,10 +30,10 @@
                 <input type="text" id="tokens">
             </div>
             <div class="item">
-                <p id="result">
-                    <!-- Price for <span class="special">{}</span> tokens is <span class="special">USD{}</span>wich is <span
-                        class="special">PEN {}</span> -->
-                </p>
+                <label>USD: <span class="special" id="USD"></span></label>
+            </div>
+            <div class="item">
+                <label>PEN: <span class="special" id="PEN"></span></label>
             </div>
         </div>
     </div>
@@ -58,13 +58,19 @@
         }
 
         function initCalculations() {
-            const resultElement = document.querySelector("#result");
             let tokens = document.querySelector("#tokens").value;
             tokens = removeNonNumbers(tokens);
             let model = document.querySelector("#model").value;
 
             let price = calculateTokenPrice(tokens, model).toFixed(4);
-            resultElement.innerHTML = "Price for <span class='special'>" + tokens + " </span> tokens is <span class='special'> USD " + price + "</span>";
+
+            const usdElement = document.querySelector("#USD");
+            usdElement.innerHTML = price;
+
+            const penElement = document.querySelector("#PEN");
+            // penElement.innerHTML = convertUSDToPEN(price);
+            convertUSDToPEN(price).then(data => penElement.innerHTML = data)
+
             document.querySelector("#tokens").value = formatNumberWithCommas(tokens);
         }
 
@@ -75,6 +81,15 @@
         function formatNumberWithCommas(number) {
             return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
+
+        async function convertUSDToPEN(amount) {
+            const response = await fetch(`https://api.exchangerate-api.com/v4/latest/USD`);
+            const data = await response.json();
+            const rate = data.rates.PEN;
+            const convertedAmount = amount * rate;
+            return convertedAmount.toFixed(4);
+        }
+
 
     </script>
 </body>
