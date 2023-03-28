@@ -8,7 +8,9 @@ $gray: #ffffffbb;
 body {
 	font-family: "Source Code Pro", monospace !important;
 
-	background-color: $base-color;
+	// background-color: $base-color;
+	background-image: url("https://openaicom.imgix.net/8d14e8f0-e267-4b8b-a9f2-a79120808f5a/chatgpt.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=0%2C0%2C2048%2C2048&w=1400");
+	background-size: contain;
 	color: $white;
 	box-sizing: border-box;
 
@@ -18,7 +20,7 @@ body {
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 2.25rem;
 	font-weight: bold;
 	span {
 		color: $gray;
@@ -27,16 +29,16 @@ h1 {
 }
 
 .wrapper {
-	background-color: $wrapper-color;
+	background-color: transparentize($wrapper-color, 0.1);
 	display: grid;
 	place-items: center;
 
 	min-height: 400px;
 	min-width: 345px;
-	// height: 70vh;
+	height: 70vh;
 	width: 70vw;
 
-	margin: 20vh auto;
+	margin: 15vh auto;
 	border-radius: 0.5rem;
 	padding: 0.5rem;
 
@@ -53,7 +55,7 @@ h1 {
 
 	.title {
 		padding: 0;
-		margin: 1rem auto;
+		margin: 2rem auto;
 	}
 	.item {
 		margin: 0;

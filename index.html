@@ -60,7 +60,9 @@
             let tokens = document.querySelector("#tokens").value;
             tokens = removeNonNumbers(tokens);
             let model = document.querySelector("#model").value;
-            resultElement.innerHTML = "Price for <span class='special'>" + tokens + " </span> tokens is <span class='special'> USD " + calculateTokenPrice(tokens, model).toFixed(4) + "</span>";
+
+            let price = calculateTokenPrice(tokens, model).toFixed(4);
+            resultElement.innerHTML = "Price for <span class='special'>" + tokens + " </span> tokens is <span class='special'> USD " + price + "</span>";
             document.querySelector("#tokens").value = formatNumberWithCommas(tokens);
         }
 

@@ -145,7 +145,8 @@ select::-ms-expand {
 
 body {
   font-family: "Source Code Pro", monospace !important;
-  background-color: #191919;
+  background-image: url("https://openaicom.imgix.net/8d14e8f0-e267-4b8b-a9f2-a79120808f5a/chatgpt.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=0%2C0%2C2048%2C2048&w=1400");
+  background-size: contain;
   color: #fff;
   box-sizing: border-box;
   height: 100vw;
@@ -154,7 +155,7 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: bold;
 }
 h1 span {
@@ -163,13 +164,14 @@ h1 span {
 }
 
 .wrapper {
-  background-color: #3b3b3b;
+  background-color: rgba(59, 59, 59, 0.9);
   display: grid;
   place-items: center;
   min-height: 400px;
   min-width: 345px;
+  height: 70vh;
   width: 70vw;
-  margin: 20vh auto;
+  margin: 15vh auto;
   border-radius: 0.5rem;
   padding: 0.5rem;
   box-shadow: 0px 10px 39px 10px rgba(62, 66, 66, 0.22);
@@ -182,7 +184,7 @@ h1 span {
 }
 .calculator .title {
   padding: 0;
-  margin: 1rem auto;
+  margin: 2rem auto;
 }
 .calculator .item {
   margin: 0;
