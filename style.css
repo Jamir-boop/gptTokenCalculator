@@ -199,6 +199,9 @@ h1 span {
   padding: 0;
   margin: 2rem auto;
 }
+.calculator .title .sho:hover {
+  color: #cf5fd4;
+}
 .calculator .item {
   margin: 0;
   padding: 0.2rem;
